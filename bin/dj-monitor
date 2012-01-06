@@ -3,7 +3,7 @@
 # assumes the cwd is a rails application
 
 require 'yaml'
-require 'lib/DJMonitor'
+require 'lib/dj-monitor'
 
 rails_env = ENV['RAILS_ENV'] || 'development'
 puts "Loading #{rails_env}"
