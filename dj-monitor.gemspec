@@ -18,5 +18,4 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec"
   gem.add_dependency(%q<sequel>, ["~> 3.12.1"])
   gem.add_dependency(%q<pony>, ["~> 1.0.0"])
-  gem.add_dependency(%q<delayed_job>)
 end

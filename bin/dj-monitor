@@ -3,10 +3,11 @@
 # assumes the cwd is a rails application
 
 require 'yaml'
-require 'lib/dj-monitor'
+require 'rubygems'
+require 'dj-monitor'
 
 rails_env = ENV['RAILS_ENV'] || 'development'
-puts "Loading #{rails_env}"
+STDOUT.puts "Loading #{rails_env}"
 configuration = YAML.load_file("config/database.yml")
-puts "Monitoring DJ in #{configuration[rails_env][:database]}"
-Delayed::Job::Monitor.run(:database => configuration[rails_env])
+STDOUT.puts "Monitoring DJ in #{configuration[rails_env]['database']}"
+Monitor.run(:database => configuration[rails_env])
