@@ -21,8 +21,8 @@ class Monitor
 
   DEFAULT_THRESHOLDS = {
     :total_job_threshold     => 50,
-    :failed_job_threshold    => 2,
-    :scheduled_job_threshold => 50,
+    :failed_job_threshold    => 1,
+    :scheduled_job_threshold => 40,
     :waiting_job_threshold   => 10,
     :running_job_threshold   => 5
   }.freeze
@@ -45,20 +45,20 @@ class Monitor
   def run
     if sick?
       alert
-    else
-      puts "All is fine!"
-      puts "Total jobs:\t\t#{total_jobs}"
-      puts "Failed jobs:\t\t#{failed_jobs}"
-      puts "Scheduled jobs:\t\t#{scheduled_jobs}"
-      puts "Waiting jobs:\t\t#{waiting_jobs}"
-      puts "Running jobs:\t\t#{running_jobs}"
+    # else
+    #       puts "All is fine!"
+    #       puts "Total jobs:\t\t#{total_jobs}"
+    #       puts "Failed jobs:\t\t#{failed_jobs}"
+    #       puts "Scheduled jobs:\t\t#{scheduled_jobs}"
+    #       puts "Waiting jobs:\t\t#{waiting_jobs}"
+    #       puts "Running jobs:\t\t#{running_jobs}"
     end
   end
 
   def alert
     Pony.mail(:to      => @options[:alert_to] ? @options[:alert_to] : "dw@penthion.nl",
               :from    => @options[:alert_from] ? @options[:alert_from] : "monitor@penthion.nl",
-              :subject => @options[:alert_subject] ? @options[:alert_subject] : "[Alert] DJ Queue (#{`hostname`})",
+              :subject => @options[:alert_subject] ? @options[:alert_subject] : "[Alert] DJ Queue (#{@options[:database]})",
               :body    => alert_body)
   end
 
