@@ -1,0 +1,60 @@
+h1. DJ Monitor
+
+This gem is meant to monitor a DJ Work queue. Right now its a work in progress and only works for me. Some config options need to be extracted as of yet (defaults to mine)
+
+h2. More Information
+
+Not right now.
+
+h2. Required Gems
+
+This gem requires these gems:
+
+* pony
+* sequel
+
+h2. Dependencies
+
+To use this gem, you will need:
+
+* The Ruby language (version 1.8.7 or 1.9.2)
+* it need to be run for the rails root of your app
+
+h2. Installing the gem
+
+* gem install dj-monitor
+
+h2. Getting Started
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+h2. Documentation and Support
+
+This is the only documentation.
+
+h4. Issues
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+h2. Similar Projects
+
+* This project is based on *delayed_job-monitor* from *Michael Guterl*. Thanks!
+
+h2. Contributing
+
+If you make improvements to this application, please share with others.
+
+* Make your feature addition or bug fix.
+* Make a test for it!
+* Commit with Git.
+* Send the author message.
+
+If you add functionality to this application, create an alternative implementation, or build an application that is similar, please contact me and I'll add a note to the README so that others can find your work.
+
+h2. Credits
+
+This project is based on *delayed_job-monitor* from *Michael Guterl*. Thanks!
+
+h2. License
+
+None

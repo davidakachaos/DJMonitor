@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["davidakachaos@gmail.com"]
   gem.description   = %q{Monitors the status of your Delayed Jobs.}
   gem.summary       = %q{This project is based on delayed_job-monitor from Michael Guterl. Thanks!}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/davidakachaos/DJMonitor"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")

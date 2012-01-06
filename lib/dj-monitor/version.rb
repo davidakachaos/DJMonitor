@@ -1,3 +1,3 @@
 module Djmonitor
-  VERSION = "0.0.4.beta"
+  VERSION = "0.0.0.1.beta"
 end
