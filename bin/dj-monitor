@@ -9,5 +9,8 @@ require 'dj-monitor'
 rails_env = ENV['RAILS_ENV'] || 'development'
 STDOUT.puts "Loading #{rails_env}"
 configuration = YAML.load_file("config/database.yml")
+STDOUT.puts "Loading options from dj-monitor.yml if found"
+options = Dir.glob('dj-monitor.yml').any? ? YAML.load_file("dj-monitor.yml") : {}
+options.merge!(:database => configuration[rails_env])
 STDOUT.puts "Monitoring DJ in #{configuration[rails_env]['database']}"
-Monitor.run(:database => configuration[rails_env])
+Monitor.run(options)
