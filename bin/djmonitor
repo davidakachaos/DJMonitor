@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# assumes the cwd is a rails application
+
+require 'yaml'
+require 'delayed_job/monitor'
+
+rails_env = ENV['RAILS_ENV'] || 'development'
+configuration = YAML.load_file("config/database.yml")
+
+Delayed::Job::Monitor.run(:database => configuration[rails_env])
