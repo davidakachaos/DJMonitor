@@ -28,17 +28,15 @@ h2. Getting Started
 
 After installing the gem, you can set this up as a cron task like this:
 
-bc.
-  */10 * * * * cd /your/rails/app/path && RAILS_ENV=production /opt/ruby-ent/bin/dj-monitor
+bq.  */10 * * * * cd /your/rails/app/path && RAILS_ENV=production /opt/ruby-ent/bin/dj-monitor
 
 Every 10 minutes this script gets run and checks the database for the RAILS_ENV set.
 
 The script will look for a dj-monitor.yml file for some options. Example of this file:
 
-bc.
-  alert_to: "some1@example.net,person2@company.nu"
-  alert_from: "monitor-dj@davidakachaos.nl"
-  alert_subject: "OMG! DJ has a problem here!"
+bq. alert_to: "some1@example.net,person2@company.nu"
+bq. alert_from: "monitor-dj@davidakachaos.nl"
+bq. alert_subject: "OMG! DJ has a problem here!"
 
 h2. Documentation and Support
 
