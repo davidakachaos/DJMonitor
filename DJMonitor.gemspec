@@ -11,9 +11,9 @@ Gem::Specification.new do |gem|
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.name          = "DJMonitor"
+  gem.name          = "dj-monitor"
   gem.require_paths = ["lib"]
-  gem.version       = DJMonitor::VERSION
+  gem.version       = djmonitor::VERSION
 
   gem.add_development_dependency "rspec"
   gem.add_dependency(%q<sequel>, ["~> 3.12.1"])
