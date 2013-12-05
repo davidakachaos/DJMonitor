@@ -17,5 +17,5 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rspec"
   gem.add_dependency(%q<sequel>, ["~> 4.5.0"])
-  gem.add_dependency(%q<pony>, ["~> 1.0.0"])
+  gem.add_dependency(%q<pony>, ["~> 1.6.0"])
 end

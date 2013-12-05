@@ -62,7 +62,7 @@ module DjMonitor
 
   Total jobs:\t\t#{total_jobs}
   Failed jobs:\t\t#{failed_jobs}
-  Scheduled jobs:\t\t#{scheduled_jobs}
+  Scheduled jobs:\t#{scheduled_jobs}
   Waiting jobs:\t\t#{waiting_jobs}
   Running jobs:\t\t#{running_jobs}
           }
