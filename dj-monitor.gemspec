@@ -13,9 +13,9 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "dj-monitor"
   gem.require_paths = ["lib"]
-  gem.version       = Djmonitor::VERSION
+  gem.version       = DjMonitor::VERSION
 
   gem.add_development_dependency "rspec"
-  gem.add_dependency(%q<sequel>, ["~> 3.12.1"])
+  gem.add_dependency(%q<sequel>, ["~> 4.5.0"])
   gem.add_dependency(%q<pony>, ["~> 1.0.0"])
 end

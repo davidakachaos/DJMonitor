@@ -13,4 +13,4 @@ STDOUT.puts "Loading options from dj-monitor.yml if found"
 options = Dir.glob('dj-monitor.yml').any? ? YAML.load_file("dj-monitor.yml") : {}
 options.merge!(:database => configuration[rails_env])
 STDOUT.puts "Monitoring DJ in #{configuration[rails_env]['database']}"
-Monitor.run(options)
+DjMonitor::Monitor.run(options)
